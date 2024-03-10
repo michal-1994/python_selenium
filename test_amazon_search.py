@@ -10,7 +10,7 @@ def test_amazon_search():
 	search = driver.find_element(By.ID, 'twotabsearchtextbox')
 	search.send_keys('spodnie męskie', Keys.ENTER)
 
-	expected_text = '"spodnie męskiew"'
+	expected_text = '"spodnie męskie"'
 	actual_text = driver.find_element(By.XPATH, '//span[@class="a-color-state a-text-bold"]').text
 
 	assert expected_text == actual_text, f"Error. Expected text {expected_text}, but actual text {actual_text}"
