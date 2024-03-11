@@ -3,13 +3,13 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
-class TestAmazon:
+class TestAmazonSearch:
 	search_words = ('sukienka', 'buty', 'spodnie męskie')
 	driver = ''
 
 	def setup_method(self):
 		self.driver = webdriver.Chrome()
-		self.driver.implicitly_wait(10)
+		self.driver.implicitly_wait(5)
 		self.driver.get("https://www.amazon.pl/")
 
 	@pytest.mark.parametrize('search_query', search_words)
